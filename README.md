@@ -1,6 +1,27 @@
-# Getting Started with Create React App
+# Conway's Game of Life
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a sample application I used to better learn React and is a work in progress.
+
+Conway's Game of Life is played on a two-dimensional rectangular grid of cells. Each cell can be considered alive or dead. After each turn of the game, the status of each cell can change depending on the status of its 8 neighbors according to the below rules.
+
+1. Any live cell with fewer than two live neighbours dies, as if by underpopulation.
+2. Any live cell with two or three live neighbours lives on to the next generation.
+3. Any live cell with more than three live neighbours dies, as if by overpopulation.
+3. Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
+
+More on the game rules: [Conways Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life).
+
+### Assumptions
+
+- For initial simplicity, any cells outside the range of the grid are considered dead. This is technically inaccurate results
+- The starting grid size is fixed
+
+### Future Additions
+
+-[ ] Have grid edges wrap to the opposite side: "Stitch" the left/right and top/bottom edges together
+-[ ] Allow grid size to be configured
+-[ ] Add TypeScript
+
 
 ## Available Scripts
 
