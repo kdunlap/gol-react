@@ -18,11 +18,11 @@ More on the game rules: [Conways Game of Life](https://en.wikipedia.org/wiki/Con
 
 ### Future Additions
 
--[ ] Component Tests
--[ ] Deploy somewhere for demoing
--[ ] Have grid edges wrap to the opposite side: "Stitch" the left/right and top/bottom edges together
--[ ] Allow grid size to be configured
--[ ] Add TypeScript
+- [ ] Component Tests
+- [ ] Deploy somewhere for demoing
+- [ ] Have grid edges wrap to the opposite side: "Stitch" the left/right and top/bottom edges together
+- [ ] Allow grid size to be configured
+- [ ] Add TypeScript
 
 
 ## Available Scripts
