@@ -79,7 +79,6 @@ export function decideNextGeneration(isAlive, aliveNeighbors){
 
     // Any live cell with two or three live neighbours lives on to the next generation.
     else{
-      // has 2 or 3 neighbors
       return 1
     }
   }
@@ -95,16 +94,29 @@ export function decideNextGeneration(isAlive, aliveNeighbors){
   }
 }
 
+// initialize each cell with a random 0 or 1
+export function randomizeBoard(numRows, numCols){
+  const board = []
+  for(let i = 0; i < numRows; i++){
+    const row = []
+    for(let j = 0; j < numCols; j++){
+      row[j] = Math.round(Math.random())
+    }
+    board[i] = row
+  }
+  return board
+}
 
-export function tick(board){
-  const nextGen = [...board]
+export function iterateBoard(board){
+  // deep copy board
+  const newBoard = board.map((row) => [...row])
 
-  board.forEach((row, y) => {
-    row.forEach((cell, x) => {
-        const aliveNeighbors = countAliveNeighbors(board, x, y)
-        nextGen[y][x] = decideNextGeneration(cell === 1, aliveNeighbors)
+  board.forEach((row, rowIndex) => {
+    row.forEach((cell, colIndex) => {
+      const aliveNeighbors = countAliveNeighbors(board, rowIndex, colIndex)
+      newBoard[rowIndex][colIndex] = decideNextGeneration(cell === 1, aliveNeighbors)
     })
   })
 
-  return nextGen
+  return newBoard
 }

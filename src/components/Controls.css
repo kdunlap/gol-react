@@ -1,0 +1,9 @@
+.game-controls{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.game-controls button{
+    margin: 0 10px;
+}

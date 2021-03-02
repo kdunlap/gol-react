@@ -14,10 +14,12 @@ More on the game rules: [Conways Game of Life](https://en.wikipedia.org/wiki/Con
 ### Assumptions
 
 - For initial simplicity, any cells outside the range of the grid are considered dead. This is technically inaccurate results
-- The starting grid size is fixed
+- The starting grid size is fixed for now
 
 ### Future Additions
 
+-[ ] Component Tests
+-[ ] Deploy somewhere for demoing
 -[ ] Have grid edges wrap to the opposite side: "Stitch" the left/right and top/bottom edges together
 -[ ] Allow grid size to be configured
 -[ ] Add TypeScript
