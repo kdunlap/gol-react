@@ -108,7 +108,7 @@ export function randomizeBoard(numRows, numCols){
 }
 
 export function iterateBoard(board){
-  // deep copy board
+  // copy board
   const newBoard = board.map((row) => [...row])
 
   board.forEach((row, rowIndex) => {
