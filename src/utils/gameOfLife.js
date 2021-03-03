@@ -14,48 +14,51 @@ export function countAliveNeighbors(board, row, col){
     throw new Error("Out of range board index")
   }
 
-  const totalRows = board.length - 1
-  const totalCols = board[0].length - 1
+  const rowEndIndex = board.length - 1
+  const colEndIndex = board[0].length - 1
+
+  let rowIndex
+  let colIndex
 
   // top left
-  if(row > 0 && col > 0) {
-    totalAlive += board[row - 1][col - 1]
-  }
+  rowIndex = row > 0 ? row - 1 : rowEndIndex
+  colIndex = col > 0 ? col - 1 : colEndIndex
+  totalAlive += board[rowIndex][colIndex]
 
   // top
-  if(row > 0) {
-    totalAlive += board[row - 1][col]
-  }
+  rowIndex = row > 0 ? row - 1 : rowEndIndex
+  colIndex = col
+  totalAlive += board[rowIndex][colIndex]
 
   // top right
-  if(row > 0 && col < totalCols) {
-    totalAlive += board[row - 1][col + 1]
-  }
+  rowIndex = row > 0 ? row - 1 : rowEndIndex
+  colIndex = col < colEndIndex ? col + 1 : 0
+  totalAlive += board[rowIndex][colIndex]
 
   // right
-  if(col < totalCols){
-    totalAlive += board[row][col + 1]
-  }
+  rowIndex = row
+  colIndex = col < colEndIndex ? col + 1 : 0
+  totalAlive += board[rowIndex][colIndex]
 
   // bottom right
-  if(row < totalRows && col < totalCols) {
-    totalAlive += board[row + 1][col + 1]
-  }
+  rowIndex = row < rowEndIndex ? row + 1 : 0
+  colIndex = col < colEndIndex ? col + 1 : 0
+  totalAlive += board[rowIndex][colIndex]
 
   // bottom
-  if(row < totalRows) {
-    totalAlive += board[row + 1][col]
-  }
+  rowIndex = row < rowEndIndex ? row + 1 : 0
+  colIndex = col
+  totalAlive += board[rowIndex][colIndex]
 
   // bottom left
-  if(row < totalRows && col > 0) {
-    totalAlive += board[row + 1][col - 1]
-  }
+  rowIndex = row < rowEndIndex ? row + 1 : 0
+  colIndex = col > 0 ? col - 1 : colEndIndex
+  totalAlive += board[rowIndex][colIndex]
 
   // left
-  if(col > 0){
-    totalAlive += board[row][col - 1]
-  }
+  rowIndex = row
+  colIndex = col > 0 ? col - 1 : colEndIndex
+  totalAlive += board[rowIndex][colIndex]
 
   return totalAlive
 }

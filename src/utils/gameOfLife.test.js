@@ -41,16 +41,16 @@ test('countAliveNeighbors correctly counts neighbors at edge cells', () => {
   const board = [
     [0,1,0],
     [1,0,1],
-    [0,0,1]
+    [0,1,1]
   ]
-  expect(countAliveNeighbors(board, 0, 0)).toStrictEqual(2)
-  expect(countAliveNeighbors(board, 0, 1)).toStrictEqual(2)
-  expect(countAliveNeighbors(board, 0, 2)).toStrictEqual(2)
-  expect(countAliveNeighbors(board, 1, 0)).toStrictEqual(1)
-  expect(countAliveNeighbors(board, 1, 2)).toStrictEqual(2)
-  expect(countAliveNeighbors(board, 2, 0)).toStrictEqual(1)
-  expect(countAliveNeighbors(board, 2, 1)).toStrictEqual(3)
-  expect(countAliveNeighbors(board, 2, 2)).toStrictEqual(1)
+  expect(countAliveNeighbors(board, 0, 0)).toStrictEqual(5)
+  expect(countAliveNeighbors(board, 0, 1)).toStrictEqual(4)
+  expect(countAliveNeighbors(board, 0, 2)).toStrictEqual(5)
+  expect(countAliveNeighbors(board, 1, 0)).toStrictEqual(4)
+  expect(countAliveNeighbors(board, 1, 2)).toStrictEqual(4)
+  expect(countAliveNeighbors(board, 2, 0)).toStrictEqual(5)
+  expect(countAliveNeighbors(board, 2, 1)).toStrictEqual(4)
+  expect(countAliveNeighbors(board, 2, 2)).toStrictEqual(4)
 });
 
 test('decideNextGeneration throws an error when given more than 8 neighbors', () => {
@@ -115,12 +115,12 @@ test('iterateBoard generates next iteration', () => {
   const board = [
     [0,1,0],
     [1,0,1],
-    [0,0,1]
+    [0,1,1]
   ]
   const expectedBoard = [
-    [0,1,0],
-    [0,0,1],
-    [0,1,0]
+    [0,0,0],
+    [0,0,0],
+    [0,0,0]
   ]
 
   const nextBoard = iterateBoard(board)
