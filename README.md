@@ -1,5 +1,7 @@
 [![kdunlap](https://circleci.com/gh/kdunlap/gol-react.svg?style=svg&circle-token=9b5a4d30bdbdfeaba20e260c3f21f4adfd0869f3)](https://app.circleci.com/pipelines/github/kdunlap/gol-react)
 
+###[Demo](https://gol-react-kdunlap.herokuapp.com)
+
 # Conway's Game of Life
 
 This project is a sample application I used to better learn React and is a work in progress.
@@ -20,8 +22,6 @@ More on the game rules: [Conways Game of Life](https://en.wikipedia.org/wiki/Con
 
 ### Future Additions
 
-- [x] Have grid edges wrap to the opposite side: "Stitch" the left/right and top/bottom edges together
-- [ ] Deploy somewhere to demo
 - [ ] Component Tests
 - [ ] Add TypeScript
 - [ ] Allow grid size to be configured
