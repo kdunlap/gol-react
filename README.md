@@ -1,6 +1,6 @@
 [![kdunlap](https://circleci.com/gh/kdunlap/gol-react.svg?style=svg&circle-token=9b5a4d30bdbdfeaba20e260c3f21f4adfd0869f3)](https://app.circleci.com/pipelines/github/kdunlap/gol-react)
 
-###[Demo](https://gol-react-kdunlap.herokuapp.com)
+### [Demo](https://gol-react-kdunlap.herokuapp.com)
 
 # Conway's Game of Life
 
